@@ -1,0 +1,332 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+   :root {
+    --base-color: #fff;
+    --main-color: #E6EBF7;
+    --text-color: #333;
+  }
+  /*--------------------------------
+   全体
+  ---------------------------------*/
+   html {
+    font-size: 100%;
+  }
+   body {
+    font-family:'PT Sans','Noto Sans JP', sans-serif;
+    color: var(--text-color);
+    line-height:1.5;
+    letter-spacing: .05rem;
+    background: var(--base-color);
+  }
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  a:hover {
+    color:#333;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+  li {
+    list-style: none;
+  }
+  /*--------------------------------
+   layout
+  ---------------------------------*/
+  .container {
+    width: 980px;
+    margin: 0 auto;
+    padding: 100px 20px;
+  }
+  /*--------------------------------
+  見出し
+  ---------------------------------*/
+  .sec-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  span {
+    display: block;
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 100px;
+    letter-spacing: .2em;
+  }
+  /*--------------------------------
+ button
+---------------------------------*/
+/* .btn {
+  display: inline-block;
+  padding: 20px 100px;
+  line-height: 1.8;
+  background: var(--main-color);
+  background-image: linear-gradient(to bottom, #e6ebf7, #eaeff9);
+  border-radius: 25px;
+  font-size: 1em;
+  letter-spacing: .15em
+} */
+ .btn {
+  display: block;
+  text-align: center;
+ }
+  /*--------------------------------
+   header
+  ---------------------------------*/
+  .header {
+    width: 980px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+  }
+  .header .site-title {
+    width: 15%;
+  }
+  .header .site-title img {
+    display: block;
+  }
+  .header .global-nav {
+    display: flex;
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+  }
+  .header .global-nav li {
+    margin-right: 50px;
+  }
+  .header .global-nav li a {
+    padding: 5px 10px;
+  }
+  .header .global-nav li:last-child {
+    margin-right: 0;
+  }
+  .toggle-navi {
+    display: none;
+  }
+  /*--------------------------------
+   main-visual
+  ---------------------------------*/
+  .main-visual {
+    text-align: center;
+  }
+  .main-visual img {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+    /*--------------------------------
+   concept
+  ---------------------------------*/
+  .concept .concept-message {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+  .concept .text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+      /*--------------------------------
+   service
+  ---------------------------------*/
+  .service {
+    background: var(--main-color);
+    position: relative;
+  }
+  .service-haikei::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url(../img/haikei/border_white.png) repeat-x center 0;
+    background-size: 15px 15px;
+  }
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service-list li {
+    width: 31%;
+  }
+  .service-list li img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .service-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .service-text {
+    font-size: 1rem;
+    text-align: justify;
+  }
+/*--------------------------------
+   about
+  ---------------------------------*/
+  .about {
+    position: relative;
+  }
+  .about-haikei::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url(../img/haikei/border_blue.png) repeat-x center 0;
+    background-size: 15px 15px;
+  }
+  .about .about-message {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .about-more {
+    margin-top: 50px;
+  }
+  .about-more a {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 30px 15px 30px 31px;
+    width: 200px;
+    color: #333;
+    font-size: 1rem;
+  }
+  .about-more a::before {
+    content: "";
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  .about-more a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(0 0 0 / 0);
+    border: 2px solid #90be70;
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  }
+
+  /*--------------------------------
+   works
+  ---------------------------------*/
+  .works {
+    background: var(--main-color);
+    position: relative;
+  }
+  .works-haikei::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url(../img/haikei/border_white.png) repeat-x center 0;
+    background-size: 15px 15px;
+  }
+    /*--------------------------------
+   contact
+  ---------------------------------*/
+  .contact {
+    position: relative;
+  }
+  .contact-haikei::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url(../img/haikei/border_blue.png) repeat-x center 0;
+    background-size: 15px 15px;
+  }
+  .contact .contact-message {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .button {
+    display: inline-block;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    border-radius: 10px;
+    /* background: linear-gradient(90deg,rgba(251,176,222,1)0%,rgba(132,240,255,1)100%); */
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 15px 65px 15px 55px;
+    /* box-shadow: rgba(100,100,111,0.2)0 7px 29px 0; */
+    box-shadow: rgba(100,100,111,0.2)0 2px 7px 0;
+    position: relative;
+    transition: all .2s;
+  }
+  .button::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 32px;
+    margin: auto;
+    transition: all .2s;
+  }
+  .button:hover {
+    /* box-shadow: rgba(100,100,111,0.3)0 7px 29px 0; */
+    box-shadow: rgba(100,100,111,0.3)0 2px 7px 0;
+  }
+  .button:hover::after {
+    right: 25px;
+  }
+  /*--------------------------------
+   footer
+  ---------------------------------*/
+  .footer {
+    padding-top: 50px;
+    background: var(--main-color);
+  }
+  .sns-link {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+  }
+  .sns-link li {
+    font-size: 1.5rem;
+  }
+  .footer small {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+  }
